@@ -1,0 +1,35 @@
+Introduction to network
+Datalink: Unicast, Multicast, and Broadcast:
+    Unicast is One device to another device is a transmission meant for one specific address 
+    
+    Multicast is sent to multiple devices, accepted or discarded depending on criteria
+
+    Broadcast is sent to all devices, accomplished using boradcast address, all F's, used so devices can learn about one another
+
+Dissecting an Ethernet Frame:
+   "Data packet" all encompassing term that represents any single set of binary data being sent across a network link
+   "Ethernet frame" - a highly structured collection of information presented in a specific order
+        First part of ethernet frame is preamble, an 8 bytes (64 bit) section that can be split into two sections first 7 are alternating 1's & 0's
+        Start frame delimiter which signals to a recieving device that the preamble is over and the frame will now follow
+        Destination MAC address- hardware address of the recipiant
+        Source address is where the frame originated from
+        Ether type field 16 bits long and used to describe the protocol of the contents of the frame
+        vlan header indicates that it's a vlan, which is a virtual LAN
+        Payload is the actual data being transported
+        Frame Check Sequence a 4 byte number that represents a checksum value (cyclical redundancy check important for data integrity)
+
+
+Intro to Network Layer:
+    LAN: Nodes communciate through MAC address (bad for scaling)
+
+        IP address
+        32 bit numbers in 4 octets represented in binary for a total of 8 bytes
+        distributed in large sections by heirarchy
+        
+
+
+
+        
+
+
+
