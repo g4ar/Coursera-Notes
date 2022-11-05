@@ -104,6 +104,31 @@ Subnetting
     two of the most important operators are OR and AND
     subnet mask uses and operators to determine if ip exists on the same network
     
+    CIDR
+        Classless inter domain routing
+        uses subnet masks to demarcate networks
+        demarcation point - To describe where one network end and another begins 
+        CIDR combines subnet and network ID
+        CIDR Allows adresss classes to be defined by two individual ID's
+        Host ID remains the same in CIDR
+        CIDR allows for more flexible network sizes
+
+    Basic routing
+    Router- A network device that forwards fraffic depending on the Destination address of that traffic (has at least two points)
+    Router recieves packet, examines the Destination IP, looks it up in the routing table, and sends it to the closest router to that point
+
+    Routing tables
+    basic routing tables have the following four columns:
+    Destination Network the node that each network the table knows about
+    Next hop IP adress of the next router, or connect directly to the requester
+    Total hops counts the number of hops needed to destination router
+    Interface Which of it's interfaces it should send the packet out of
+
+    Interior gateway protocols
+    Routing protcols are either interior gateway protocols or exterior gateway protocol
+    interior gateway protocols are then split into link state routing protocols and distance vector protocols
+    interior gateways are used by routers to share information within a single autonomous system
+
     
     
   
