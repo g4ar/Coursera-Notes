@@ -128,6 +128,12 @@ Subnetting
     Routing protcols are either interior gateway protocols or exterior gateway protocol
     interior gateway protocols are then split into link state routing protocols and distance vector protocols
     interior gateways are used by routers to share information within a single autonomous system
+    autonomous system is a collection of networks that all fall under the control of a single network operator
+    distance vector is an older standard uses a routing table and sends that table to every router it's connected to, routers don't know much about the states
+    in CS a list is known as a vector
+    link state protocols advertise the state of the link to other routers, every router on the system knows everything about every other router
+    link state protocols use difficult algorithms against the data to determine the fastests packet route
+
 
     
     
