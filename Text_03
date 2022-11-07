@@ -14,7 +14,10 @@ This file begins from week 3 of Course 2
   End of lesson goals:
     1. Identify the differences between TCP & UDP
     2. Explain the three way handshake
+    Transmitting computer sends a SYN TCP packet, recieving computer sends a SYN TCP packet, followed by an ACK TCP packet
+    Then the transmitting computer sends a ACK TCP packet back
     3. Understand how TCP flags are used in this process
+    Syn & Ack flags are traded back and forth to acknowledge recieved data, and establish connection.
     4. Describe what multi-plexing and demultiplexing are and how they work
       Multiplexing means nodes on a network have the ability to direct traffic toward many different recieving services.
       Demultiplexing is the same concept, just at the recieving end. It's taking traffic that's all aimed at the same node
@@ -22,7 +25,7 @@ This file begins from week 3 of Course 2
     5. Basics of firewalls
   
   Port is a 16 bit number that's used to direct traffic to specific services running on a networked computer
-  A server is a progam runing on a computer waiting to be asked for data
+  A server is a progam running on a computer waiting to be asked for data
   A client is another program that's requesting this data
   difference services run while lisetneing on specific ports for incoming requests
   For example HTTP is normally run on port 80
@@ -33,4 +36,35 @@ This file begins from week 3 of Course 2
   older service used to transfer files from one computer to another, listening on port 21
   
   Dissection of a TCP segment:
-  
+  IP Datagram encapsulates a IP segment
+  IP Datagram has a payload, which is made up of a tcp segment, which contains a TCP header & payload
+  TCP header is split into lots of fields:
+    Destionation port, which describes the port the data is headed towards
+    Source port: high-numbered port chosen from a special section of ports known as ephemeral ports
+    Sequence number: 32 bit number that's used to keep track of where in a sequence of TCP segments this one is expected to be
+    Acknoledgment number the number of the next expected segment
+    data offset field a 4 bit number communcating how long the header is.
+    6 bits for control flags
+    TCP window - a 16 bit number the specifies the range of sequence numbers that might be sent before an acknowledgement is required
+    Checksum - Operates just like other checksums, calculates whole segment against header to ensure no data was lost
+    Urgent pointer field is used in conjunction with one of the TCP control flags to point out particular segments that might be more important
+    Options sometimes used for more complicated flow control
+    padding sequence of 0's to begin payload at expected location
+    
+  TCP control flags and Three-way handshake:
+    1st flag: URG (Urgent) a value of one here indicates that the segment is considered urgent and that the urgent pointer field has more data about this
+    2nd flag: ACK (acknowleged) a value of one here indicates that the acknowledgement number field should be examined
+    3rd flag: PSH (push) the transmitting device wants the recieving device to push currently-buffered data to the application on the recieving end as soon as possible
+    4th flag: RST (reset) one of the sides in a TCP connection hasn't been able to properly recover from a series of missing or malformed segements
+    5th flag: SYN (synchronize) used when first establishing a TCP connection and makes sure the recieving end knows to examine the sequence number field
+    6th flag: FIN (finish) When this flag is set to one, it means the transmitting computer doesn't ahve any more data to send and the connection can be cloesd
+    
+    Handshake is a way for two devices to ensure that they're speaking the same protocol and will be able to understand each other
+    Buffer: Computing technique where a certain amount of data is held somewhere before being sent elsewhere
+    Four way handshake:
+    Fin sent from reciever
+    transmitter ACK's
+    transmitter sends FIN
+    reciever ACK's back
+    
+    
