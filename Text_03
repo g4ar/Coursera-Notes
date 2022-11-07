@@ -23,3 +23,14 @@ This file begins from week 3 of Course 2
   
   Port is a 16 bit number that's used to direct traffic to specific services running on a networked computer
   A server is a progam runing on a computer waiting to be asked for data
+  A client is another program that's requesting this data
+  difference services run while lisetneing on specific ports for incoming requests
+  For example HTTP is normally run on port 80
+  Ports are normally denoted with a ":" after an IP address, when written this way it's known as a socket address
+  or socket number
+  
+  FTP file transfer protcol server
+  older service used to transfer files from one computer to another, listening on port 21
+  
+  Dissection of a TCP segment:
+  
