@@ -1,3 +1,25 @@
-  The file beings from week 2 IP Addresses:
+This file begins from week 3 of Course 2
   
- 
+  Intro to the Transport & Application Layer
+  Transport layer allows traffic to be directed to specific network applications
+  APplication layer allows these applications to communicate in a way they understand
+  Goals for the module:
+    1. Describe TCP ports & sockets and identify the different componets of a TCP header
+    2. Show the difference between connection oriented and connection list protocols
+    3. #xplain how TCP is used to ensure data integrity
+    
+ The Transport Layer:
+ The transport layer is responsible for multi-plexing and deplexing, ensuring data integrity through error checking
+ and data verification
+  End of lesson goals:
+    1. Identify the differences between TCP & UDP
+    2. Explain the three way handshake
+    3. Understand how TCP flags are used in this process
+    4. Describe what multi-plexing and demultiplexing are and how they work
+      Multiplexing means nodes on a network have the ability to direct traffic toward many different recieving services.
+      Demultiplexing is the same concept, just at the recieving end. It's taking traffic that's all aimed at the same node
+      and delivering it to the proper recieving service.
+    5. Basics of firewalls
+  
+  Port is a 16 bit number that's used to direct traffic to specific services running on a networked computer
+  A server is a progam runing on a computer waiting to be asked for data
