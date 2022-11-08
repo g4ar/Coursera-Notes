@@ -1,0 +1,71 @@
+This text begins at the start of Anatomy of a Domain Name in week 4
+    Any given domain name has three parts:
+    Subdomain (or host name): www
+    Domain: name block
+    TLD: ex: .com
+    Fully qualified domain name is all of these put together
+    ICANN handles TLD names
+    (Internet Corporation for Assigned Names and Numbers)
+    Domains are used to demarcate where control moves from a TLD name server to an authoritative name server
+    A registrar is a company that has an agreement with ICANN to sell unregistered domain names
+    DNS can technically support up to 127 levels of domain in total for a single fully qualified name
+    Each individual section can onlly be 63 characters long and a complete FQDN is limited to a total of 255 characters
+
+    DNS Zones:
+    Each TLD name server is responsible for it's root zone, and each root is responsible for each underneath
+    They're actually authoritative servers, but just much smaller responsibliity
+    the reason for DNS zones is to allow for easier control over multiple levels
+    SPlitting configurations allows for easier organization
+    Zone files are simple configuration files that declare all resource records for a particular zone
+    a zone file has to contain an SOA or start of Authority resource record delcartion
+    This SOA record declares the zone and name of the server that is it's Authority
+    Normally these files also contain NS records, which indicate other name servers that are also repsonible for this zone
+    Having multiple servers in place means it decentralizes, so if one fails you have others that are able to find the information
+    Reverse lookup zone files - let DNS ressolvers ask for an IP and get the FQDN associate with it returned
+
+    DHCP
+    Every computer on a modern TCP/IP based network needs to have at least four things specifically configured:
+        1. An IP Adresss
+        2. The subnet mask
+        3. A primary gateway
+        4. A name server
+    Three are mostly the same on every node: The subnet mask, the primary gateway and the DNS server
+    Dynamic Host Configuration Protocol is an application layer protocol that automates the configuartion
+    process of hosts on a network. A machine can query a DHCP server and recieve all it's configuration for the network in one go
+
+    DHCP reduces administartion, and makes IP choice for the admin
+    Using DHCP you can consistently make sure every 
+
+    Dynamic allocation  a range of IP addresses is set aside for client devices and one of these IP's is issued to these devices when requested
+    Automatic allocation a range of IP addresses is set aside for assignment purposes only
+    DHCP is in charge or remembering all IP's assigned to a MAC address
+    Fixed allocation requires a manually specified list of MAC adresses and their assigned IP
+    In fixed allocation DHCP must search is ARP table to find the IP/MAC address, if unable to find it may assign a new one, or not assign at all
+    DHCP could also be used to establish NTP (network time protocol servers) used to keep all computers on a network synchronized in time
+
+    DHCP in action 
+    DHCP is a application layer protocol that relies on the other layers to be functioning in order to work
+    DHCP discovery is the process in which a client configured to use DHCP attempt to get network configuration information
+    It's split into the following steps:
+        1. Server discovery
+            The DHCP client sends a DHCP discovery message. Since the machine doesn't have an IP, it specially crafts the broadcast message
+            DHCP listens on UDP port 67 & these kinds of messages are always sent from UDP port 68
+            the discover message is encapsulated in a UDP datagram with the destination port of 67, source of 68.
+            this datagram is then encapsulated in an IP datagram with a destination IP of 255.255.255.255 and a source of 0.0.0.0
+            This broadcast message would get delivered to every node. If a DHCP server is present it would recieve the message
+        2. IP Offer
+            Next the DHCP server examines it's own configuration and makes a decision on what IP address to offer, if any.
+            This depends on address allocation configuration.
+            This response is sent back as a DHCPOFFER sending back using information offered up by the datagram orginally 
+        3. DCHP Request
+            DHCP Request is the acceptance signal of a IP offered to it
+        4. DHCP ACK
+            Lastly the DHCP server recieves the message and DHCPACK's back, sending the IP it's allowed the client to have
+
+            All of this is known as the DHCP lease, and it includes an expiration. Anywhere from a few days to only a short amount of time
+            When the lease expires, this process would have to renegotiate a lease all over again
+
+
+
+
+
