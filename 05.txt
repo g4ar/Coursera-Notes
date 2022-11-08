@@ -254,6 +254,35 @@ The file contains the notes for Week 5 of Course 2 for the Google IT support Pro
         MAC filtering- configuring your access points to only allow for connections from a specific set of MAC addresses belonging to 
         devices you trust
 
+    WPA3 Key Takeaways:
+        WPA3-Personal new features:
+        Natural Password selection
+        increased ease of use
+        forward secrecy
+        simultaneous authentication of equals (SAE)
+
+        WPA3-Enterprise:
+        Galois/Counter Mode Protocol (GCMP-256)
+        Opportunistic Wireless Encryption (OWE)
+        Wi-Fi Device Provisioning Protocol (DPP)
+        384-bit Hashed message authentication mode (HMAC) with Secure Hash Algorithm (SHA)
+        Elliptic Curve Diffie-Hellman Exchange (ECDHE) and Elliptic Curve Digital Signature Algorithm (ECDSA)
+    
+    Cellular networking
+        aka mobile networking
+        Cellular networks are very similar to 802.11
+        operating over radio frequencies, but these frequencies travel much further
+        Cellular networks are built around the concepts of cells, each cell is assigned a specific frequency band for use
+        and neighbors are setup so bands don't overlap just like multiple access points for Wlans
+        Cell towers are basically large range access points
+
+    Mobile device networks
+        Cellular networks
+        Wifi
+        Bluetooth
+        Internet of Things network protocols
+        
+
 
         
 
