@@ -65,6 +65,49 @@ This text begins at the start of Anatomy of a Domain Name in week 4
             All of this is known as the DHCP lease, and it includes an expiration. Anywhere from a few days to only a short amount of time
             When the lease expires, this process would have to renegotiate a lease all over again
 
+    Basics of NAT
+    Network Address Translation (NAT) is a technique instead of a protocol
+    Takes one IP address and translates it into another, weather for conserving space or security reasons.
+    NAT allows a gateway, usually a router or firewall , to rewrite the source IP of an outgoing IP datagram while retaining the original IP
+    in order to rewrite it into the response
+
+    In addition to calculating a checksum, decreasing packet TTL by 1, inspecting content of the IP datagram, the NAT router will rewrite the source IP
+    the source IP will instead become the router that is sending the packet, instead of the computer that originally sent it
+    This process of hiding the IP is called IP masquerading. It's an important security concept used to keep entire networks IP's secured.
+    When multiple networks are all running under a single NAT, it's called a one to many NAT
+
+    NAT and the transport layer
+    Port preservation is a technique where the source port chosen by a client is the same port used by the router
+    roughly this preserves a port number as the port that a certain IP is using. So when the data returns to that port, the network knows which system
+    the information is meant for.
+    Port forwarding is a technique where a specific destiation port be configured to alwasy be delivered to a specific node
+    This technique allows for complete IP masquerading while still having services that can respond to incoming traffic
+
+    NAT, non-routeable address space and the limits of IPv4
+    IANA has been in charge of IP since 1988, mostly assigning IP's to the various RIR's
+    Regional internet registries (RIR):
+        AFRINIC serves Africa
+        ARIN Serves the US, Canada, and parts of the caribbean
+        APNIC most of Asia, Australia, New Zealand, and the Pacific islands
+        LACNIC covers Central and South America, and any parts of the Caribbean not covered by ARIN
+        RIP serves Europe, Russian, and the Middle East and portions of central Asia
+    The last /8 network block was allocated Febuary 3, 2011.
+    April 2011, APNIC runs out of address
+    RIPE runs out September 2012
+    LACNIC runs out June 2014
+    ARIN ran out September 2015
+    Only AFNIC has IP's left, but are expected to run out by 2018 
+       AFRINIC entered IPv4 Exhaustion Phase 2 January 2020
+
+    Reading for IPv4 Address Exhaustion
+        IPv4 has nearly Exhausted at time of writing
+        Regional Internet Registries assign IP addresses to devices in their physical Area 
+        IPv6 provides infinietly more IP addresses and willl solve the IPv4 address exhaustion issues over time.
+        
+        
+
+
+
 
 
 
