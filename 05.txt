@@ -156,3 +156,109 @@ The file contains the notes for Week 5 of Course 2 for the Google IT support Pro
     This is done using site-to-site or point-to-point VPNs which operate a lot like traditional VPN's except they just connect the
     two sites through a VPN tunnel
 
+    Introduction to wireless network technologies
+    Wireless networking is a way to network without wires
+    End of lesson goals:
+        1. Know the difference between ad hoc & infrastructure networks
+        2. Explain how wireless channels help wireless networks operate
+        3. Understand the basics of wireless security protocols
+
+    most common specifications for how wireless networking devices should communicate are defined by the IEEE 802.11 standards
+    802.11 family AKA, makes up WIFI. Generally all use the same protocols by operate on different frequency bands.
+    A frequency band is a certain section of the radio spectrum that's been agreed upon to be used for certain Communications
+    In north America FM radio operates between 88 & 108 megahertz this frequency band is called the FM band
+    most wifi operates on either 2.4 Ghz or 5Ghz frequency bands
+    lots of 802 specifications most common are:
+        802.11b
+        802.11a
+        802.11g
+        802.11n
+        802.11ac
+    each newer version is normally some kind of improvement over the other.
+    wireless access point is a device that bridges the wireless and wire portions of a network.
+    a single wireless network may have lots of access points, and devices connected to the network associate with the closest access point.
+    best way to think about 802.11 protocols are the physical and data link layers
+    an 802.11 frame:
+        Frame control field- 16 bit long and contains a number of subfields that are used to describe how the frame should be processed
+            This includes things like what version of 802.11 was used.
+        Duration field - specifies how long the total frame is so the receiver knows how long is should expect to listen to the transmission.
+        After this are four address fields for room to indicate which access point should be processing frame.
+        1st address field: Source MAC address
+        2nd address field: Intended destination
+        3rd address field: Receiving address (MAC address of the access point that should receive frame)
+        Sequence control field - 16 bits long and mainly contains a sequence number used to keep track of the ordering of frames 
+        4th address field: Transmitter address (MAC address of whatever just transmitted the frame)
+        Data payload - Has all of the data of the protocols further up the stack
+        Frame Check sequence field - Contains a checksum used for a cyclical redundancy check, just like how ethernet does it.
+
+    Supplemental reading for Wi-Fi 6:
+    Wifi 6 network protocol is faster and more efficent for larger networks. Benefits include:
+        Higher data rates via band splitting or increased client group sizes
+        Increased band capacity: band utilization increased from 80mHz to 160mHz
+        Better performance: The input/output streams are doubled from the 4 by 4 allowed by wifi 5 to 8 by 8 in wifi 6
+        Improved power efficiency: Devices only connect when sending or receiving data, increasing battery life.
+
+    Capabilities:
+        Channel sharing
+        Target Wake Time (TWT) - improves network speed and increases battery life by allowing battery-powered 
+        devices to sleep when not in use.
+        Multi-user MIMO (Multiple Input, Multiple Output) - Wireless technology allows more data to be transferred
+        simultaneously. This ability increases capacity and efficency in high bandwith applications.
+        160 mHz channel utilization
+        1024 Quadrature amplitude modulation combines two singals into a single channel to encode more data
+        Orthogonal Frequency Division Multiple Access (OFDMA) allows for bandwidth splitting which is assigned dynamically by the access point to separate devices.
+        Transmit beamforming is a technique that sends signals that allow for more efficient higher data rates by targeting each connected device
+
+    Wifi 6E extends Wifi 6 into 6GHz
+        Wifi 6e is an additional certification for wifi 6 that has all the feature of wifi 6 but adds a 6GHz band.
+
+    Key takeaways:
+        Wifi technology will continue to change as the needs of users and companies change.
+        Wi-Fi 6 uses technologies like those listed in capabilities to increase quality of a network.
+        Wifi 6e is an additional certification of wifi 6 that has faster speeds and better performance
+
+    Wireless network configurations:
+    Ad-hoc networks where nodes all speak directly to one another 
+        Every device involved communicates directly with one another, and all the nodes help pass along the messaging. Ad-hoc is
+        the simplest, but not the most common. Airdrop is an example of an ad-hoc connection.
+        ad-hoc networks may be used in industrial or warehouse settings where nodes communicate directly with one another, and
+        they're also useful in disaster situations where it's peer-peer Communications.
+    Wlans
+        These are the most common types of networks in the buisness world. They consist of one or more access points, which act
+        like the bridges between the wireless and wired netowrks. The wired network operates as a normal LAN, but in order to reach
+        outside the network the LANS communicate with the WLAN who then forward information onto the gateway router.
+    Mesh networks
+        Devices communicate with each other directly, forming a mesh. These networks still contain wired connections, and are often
+        used to increase the performance and range of a wireless network.
+
+    Wireless channels:
+        Channels are individual smaller sections of the overall frequency band used by a wireless network.
+        They help address collision Domains
+            (REMINDER Collision domains are any one network segment where one computer can interrupt each other)
+        Switches remember which computers live on which physical interface, which is how collision domains are avoided in physical
+        networks. Since software networks don't have phsyical interfaces for wireless devices, wireless devices would just talk over one another.
+        This is solved (partially) by channels. These channels help separate the noise by breaking into frequencies.
+        When saying that a channel operaters on 2.4 ghz band we mean it operates roughly between the 2.4 gHz to 2.5 gHz. 
+        Between these two frequencies are where channels live.
+        Channels available for use depend on the regulatory committies based on location, since those committies decide frequencies
+        802.11b network would have channel one operate between 2401mghz and 2423 mghz 
+        radio waves are rather imprecesise so you need some buffer between them.
+
+    Wireless security
+        When sending over wired connections, you have some privacy as only the end to end pieces know the data being exchanged
+        some devices in nearby proximity to wifi connections are able to pickup packets that travel through the air
+        WEP (Wired equivalent privacy) - an encryption technology that provides a very low level of privacy 
+            Basically as safe as sending unencrypted data over a wired connection. only uses 40 bit encryption
+        WPA (wifi protected access)- standardly used encryption protocol using 128 bits
+        WPA2 - an updated version to WPA, uses a 256 bit encryption Key
+        MAC filtering- configuring your access points to only allow for connections from a specific set of MAC addresses belonging to 
+        devices you trust
+
+
+        
+
+
+        
+
+    
+  
