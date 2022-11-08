@@ -1,0 +1,9 @@
+The file contains the notes for Week 5 of Course 2 for the Google IT support Professional
+
+    Introduction to connecting to the internet:
+    Desktop, laptops, servers, routers & switches, tablets cell phones atms, industrial equipment, cars and the internet of things.
+    End of module goals:
+        1. Describe various internet connectivity technologies
+        2. Define components of WAN's and outline basics of wireless and cellular networking
+
+    Dial Up, Modems & Point to point protocols:
