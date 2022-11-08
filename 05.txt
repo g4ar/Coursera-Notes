@@ -73,7 +73,86 @@ The file contains the notes for Week 5 of Course 2 for the Google IT support Pro
 
             {FTTB Fiber to the building, this is a setup where fiber technologies are used for data delivery to an individual building
             FTTH Fiber to the home, this is used in instances where fiber is run to each home or apartment complex.} May also be reffered to as FTTP
-            or fiber to the premises. Instead of a mdoem, the demarcation point for fiber technologies is known as the Optical Network Terminator or ONT.
+            or fiber to the premises. Instead of a modem, the demarcation point for fiber technologies is known as the Optical Network Terminator or ONT.
             ONT converts data from protocols the fiber network can understand
             
+    Other information:
+        PPP subprotocols include:
+            Link control Protocol (LCP) - a subprotocol that initiates and terminates connections automatically for hosts
+            Network Control Protocol (NCP) - a subprotocol that is used to negotiate optional configuration parameters and facilities for the network layer 
             
+    
+    WAN (Wide Area Network Technologies)
+        Wide area networks act like a single network but span across multiple physical layer locations
+
+        WANS typically have a few sections:
+        say one office is setup on one network, and the home office is setup on another one. Each of the networks ends at a demarcation point
+        that demarcation point is where the ISP takes over, and creates a local loop. A local loop is the area between the demarcation points and
+        the ISP's core network. This one in particular would be something like a T-carrier line or high speed optical connection to the ISP's local regional office
+    
+        Wans work by using a few different protocols at the data-link layer, these protcols are similar to the ones that run the internet.
+
+    Supplimental reading for WAN's
+
+        There are physical or software based WANs.
+        A physical WAN has a WAN router, which acts as an intermediate system to route data amongst the LAN member groups. 
+        (Also claled WAN endpoints) using a private connection. WAN routers may also be called border routers or edge routers
+        These routers facilitate an organizations access to a carrier network.
+        WAN routers have a digital modem interface, which works at the OSI link layer, and an ethernet interface for LAN
+
+        Software-Defined WAN (SD-WAN)
+        Software developed for cloud based WAN environments. SD-WAN's can be used alone or in conjunction with physical, traditional WANS.
+        
+        Optimization of WANs:
+        Compression: reduce file sizes at the reciever & sender with the same compression & decompression protocols
+        Deduplication: Prevent multiple file copies at multiple locations and keep all them in a single database.
+        Protocol Optimization: Improve efficiency of network protocols for applications that require more bandwidth.
+        Local Caching: storing local copies of network and internet files to limit DNS requests. Keeping shared files at a physical LAN
+        location where they are often requested to limit the number of far reaching requests, as well as optimize availibility of data
+        bandwith throttling: controlling network traffic during peak use
+        rate limiting- capping max data rates
+        use of complex algorithms- classifying and prioritizing data to give preferences to important traffic
+
+        WAN protocols:
+        Packet switching: 
+            Messages are broken into multiple packets, each packet contains a header
+            that includes information on how to reassemble the packets as well as the intended destination. 
+            Packets are triplicated to prevent data corruption and sent across the most optimal route to the receiver. 
+            Triplicated copies are compared to rebuild corrupted data
+
+        Frame relay: data transmission method.:
+            Frame relay is an older teh originally designed for integrated services digital network (ISDN)
+            Frame relays transmit data between endpoints of a WAN through packet switching method that works at the OSI data link and physical layers
+            Frame Relay Networks transport datagrams in frames, due to reliablity in frame relay networks the need for error checking is minimized
+            The frames include routing address information for the destination.
+                Permanent Virtual circuits (PVC)- Used for long term data connections, stay open even when not transmitting
+                Switched Virtual Circuits (SVC)- Used in temporary session connections for sporadic Communications.
+
+        Asynchronous Transfer Mode (ATM)
+            ATM is an older tech that encodes data using asynchronous time-division multiplexing.
+            The encoded data is packaged into fix-sized cells, then sent over a long distance. ATMs use routers as end points
+            between ATM networks and other networks. ATM has mostly been replaced by IP
+
+        High Level Data Control (HLDC)
+            An encapsulation or data link protocol that delivers data frames through a network. The frames include multiple fields
+            that hold information about start & end flags, controls, Frame check Sequence and protocol used. HLDC was developed to use
+            multiple protocols to replace SLDC. HDLC includes error correction, flow control, and data transmission. It has three modes:
+                Normal Response Mode (NRM) - Primary node must give permission to the secondary node to transmit.
+                Asynchronous Response Mode (ARM) - Primary node allows the secondary node to initiate Communications
+                Asynchronous Balanced Mode (ABM) - Both nodes can act as either the primary or secondary nodes. They can initiate communication between each other
+
+        Packet over Synchronous Optical Network (SONET) or Synchronous Digital Hierarchy (SDH):
+            A communication protocol used for WAN transport. 
+            The SONET or SDH communcation protocols define how point-to-point links communicate over fiber optics cables.
+
+        Multiprotocol Label Switching (MPLS):
+            A technique for optimizing network routing. MPLS replaces inefficient table lookups for long network addresses with short path labels. These labels direct data from 
+            node to node.
+    
+    Point-to-Point VPNs:
+    Point-to-Point VPNs are a popular alternitive for WANs
+    WANs are useful for transferring large amounts of data over lots of sites.
+    Due to cloud based computing, the need for WANs is decreasing as companies outsource their connections.
+    This is done using site-to-site or point-to-point VPNs which operate a lot like traditional VPN's except they just connect the
+    two sites through a VPN tunnel
+
