@@ -6,7 +6,7 @@ This file begins from week 3 of Course 2
   Goals for the module:
     1. Describe TCP ports & sockets and identify the different componets of a TCP header
     2. Show the difference between connection oriented and connection list protocols
-    3. #xplain how TCP is used to ensure data integrity
+    3. Explain how TCP is used to ensure data integrity
     
  The Transport Layer:
  The transport layer is responsible for multi-plexing and deplexing, ensuring data integrity through error checking
@@ -85,6 +85,23 @@ This file begins from week 3 of Course 2
       UDP - User datagram protcol
       UDP sets destination port & sends the packet
       
+   Firewalls
+    A firewall is just a device that blocks traffic that meets certain criteria.
+    firewalls actually operate at multiple different ranges, from blocking IP to blocking data from Applications
+    Firewalls at the transport layer block traffic to some ports, while allowing traffic to others.
+    
+    The Application Layer
+      Payload section is just the data an application wants to send
+      Ethernet is the most common at datalink layer
+      Application layer has so many protocols they will not be covered in this lesson
+      Most popular servers:
+        Microsoft ISS
+        Apache
+        nginx
+     
+     HTTP is the most common protocol used interoperably between these servers
+     FTP?
+    
       
       
       
