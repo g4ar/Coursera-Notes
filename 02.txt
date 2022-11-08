@@ -60,11 +60,11 @@ IP address classes
     class A includes those used where the first octete is used for the Network ID and the rest is host ID
     class B are where first two octetes are used for Network ID and the second two are used for host ID
     class C are where teh first three octetes are for Network ID and the last is used for host ID
-    A starts with 0xxx
-    B starts with 10xx
-    C starts with 110x
-    D starts with 1110 
-    E starts with 1111
+    A starts with 0xxx meaning everything from 1.0.0.0 - 127.0.0.0
+    B starts with 10xx meaning everything from 128.0.0.0 - 191.255.0.0
+    C starts with 110x meaning everything from 192.0.0.0 - 223.255.255.0
+    D starts with 1110 meaning everything from 224.0.0.0 - 239.255.255.255
+    E starts with 1111 meaning everytihing from 240.0.0.0- 255.255.255.255
     Class D is used for multicast
     Class E is only used for testing
     system is now mostly replaced by Classless inter-domain routing
@@ -128,12 +128,31 @@ Subnetting
     Routing protcols are either interior gateway protocols or exterior gateway protocol
     interior gateway protocols are then split into link state routing protocols and distance vector protocols
     interior gateways are used by routers to share information within a single autonomous system
+<<<<<<< HEAD
     autonomous system is a collection of networks that all fall under the control of a single network operator
     distance vector is an older standard uses a routing table and sends that table to every router it's connected to, routers don't know much about the states
     in CS a list is known as a vector
     link state protocols advertise the state of the link to other routers, every router on the system knows everything about every other router
     link state protocols use difficult algorithms against the data to determine the fastests packet route
 
+=======
+    
+    Exterior gateway Protocols
+    Exterior gateway protcols are used to communicate data between routers that represent the edges of an autonomous system
+    (Basically they're the protcols used to share information between organizations)
+    IANA a non-profit organization that helps manage things like IP address allocation
+    ASN autonomous system number allocation
+    numbers assigned to individual autonomous systems
+    
+    Most common distance vector protocols are RIP or routing infomration protocol and EIGRP or enhanced interior gateway routing protcol
+    THe most common link-state proctol is OSPF or Open Shortest Path First 
+    Only one exterior gateway protcol is in use today, that being BGP or Border Gateway Protcol
+    
+    Non-Routeable Address Space
+    Address that belong to nobody, but can be used by everyone for an internal network
+    NRAS IP's: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16
+    
+>>>>>>> 999c706b9e3725a43829a0e7b94e5dd38b8d69c2
 
     
     
