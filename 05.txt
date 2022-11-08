@@ -7,3 +7,73 @@ The file contains the notes for Week 5 of Course 2 for the Google IT support Pro
         2. Define components of WAN's and outline basics of wireless and cellular networking
 
     Dial Up, Modems & Point to point protocols:
+    Early network tech focused on trying to connect close together computers
+    Public switched telephone network (PSTN) or plain old telephone system (POTS) was already a pretty global system,
+    so Duke grads used them to create dial up, using a form called USENET
+    A dial up connection uses POTS for data transfer, and gets it's name because the connection is established by actually dialing a phone number
+    Modem = Modulator/Demodulator
+    Baud rate how many bits can be passed across a phone lines in seconds
+    110BPS was pretty common back then, but increased to 14.4kbps when Dial-up became a home standard
+
+    What is broadband?
+    The term broadband in terms of internet connectivity means any connectivity that isn't dial-up internet
+    They're long lasting connections that don't need to be established on each use.
+    T-carrier technologies were orginally invented by AT&T in order to transmit multiple phone calls over a single link
+    This was very useful for buisnesses that often had multiple people using the same lines at once
+    A single photo taken on a smartphone today would've taken 20 minutes just to load on dial-up.
+    four most common broadband solutions:
+        1. T-Carrier technologies
+        2. Digital subscriber lines or DSL 
+        3. Cable broadband
+        4. fiber connections
+    
+    T-carrier technologies
+    First invented by at&t where multiple calls could happen on the same lines
+    Every phone call was made over individual pairs of copper wire before Transmission system 1, the first T-carrier spec (Called T1)
+    T1 could carry up to 24 simultanious calls on one twisted pair 
+    Each of the 24 channels could carry up to 64kb/s which made the whole thing capable of transmitting 1.544mb/s
+    Over the years this has changed to where T1 is just any twisted pair over connection speeds of 1.544 mb/s
+    Originally T1 was only used to connect different company sites & other telecom company sites
+    when the internet exploded in the 90's buisnesses starting buying T1 installations
+    T3 is 28 T1's all multiplexed together to achieve 44.736mb/s 
+    These are basically all replaced by Fiber or broadband options
+
+    Digital Subscriber lines
+    DSL operates at a different frequency than normal phone calls on the same wire.
+    By using this different frequency, DSL was able to send much more data than traditional dial up.
+    Because of the different frequencies this also meant that both were able to operate without interfering with one another.
+    Unlike dial-up they were able to run for longer distances.
+    The two most common types of DSL were:
+        ADSL
+        (Asymmetric Digital Subscriber Line) features different speeds for incoming & outgoing data, generally this meant faster
+        download speeds and slower upload. This worked well for the average home, as they were mostly consumers.
+        SDLS
+        (Symmetric Digital Subscriber Line) is basically the same as ADSL except upload & download speeds are the same. SDSL was mainly
+        used by buisnesses who needed to send data to clients, but is now used by both home and businesses.
+        Most SDLS's have a upper cap of 1.544 mb/s, same as a T1 line.
+        Further development has brought about HDSL (High Bit-rate Digital subscriber lines) these are DSL's that provision speeds above
+        1.544 mb/s.
+
+    Cable broadband
+        In the 1940's the first TV's were made to operate on cables instead of towers.
+        1984 Cable Communications policy act deregulated the cable television buisness, alloiwng for massive growth. 
+        by 1990 cabnle television infrastructure in the US was about the size of POTS
+
+        Cable companies quickly realized that coaxial cables used by televisions were capable of transmitting much more data than a TV needed.
+        By using a different frequency on the same cable, companies were able to transmit data of internet based applications at a very high speed.
+        at the edge of consumer's network connecting their network to the ISP's core network is a Cabler modem, which connects to the CMTS (Cable Modem Termination System)
+
+    Fiber Connections
+    The core of the internet is built off fiber for faster connectivity and lower drop rate over longer areas by using light.
+    The maximium distance an electric signal can travel across a copper wire before it degrades too much is thousands of feet.
+    Fiber can travel many miles before degrading.
+    Producing & laying fiber is very expensive, so it used to be only used by data centers & ISP
+    FTTX (Fiber to the X) Fiber laying closer to clients became more previlant so this term was used
+        (FTTN) Fiber to the Neighborhood, fiber is laid out to a cabinet serving a large community
+
+            {FTTB Fiber to the building, this is a setup where fiber technologies are used for data delivery to an individual building
+            FTTH Fiber to the home, this is used in instances where fiber is run to each home or apartment complex.} May also be reffered to as FTTP
+            or fiber to the premises. Instead of a mdoem, the demarcation point for fiber technologies is known as the Optical Network Terminator or ONT.
+            ONT converts data from protocols the fiber network can understand
+            
+            
