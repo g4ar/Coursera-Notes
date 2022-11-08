@@ -281,7 +281,9 @@ The file contains the notes for Week 5 of Course 2 for the Google IT support Pro
         Wifi
         Bluetooth
         Internet of Things network protocols
-        
+
+    Other important information:
+        Another (more accurate name) for a DSL modem is a DSLAM (Digitial Subscriber Line access multiplexer)
 
 
         
