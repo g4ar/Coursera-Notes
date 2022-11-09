@@ -158,7 +158,7 @@ Ping: Internet control message protocol
     Cloud Storage:
     Cloud storage system: a customer contracts a cloud storage provider to keep their data secure, accessible, and available.
 
-    IPv6 Addressing and Subnetting
+    IPv6 Addressing and Subnetting:
     IPv5 was an experimental protocol that introduced the concept of connections, but never saw adoption. It ended up being replaced by
     TCP 
     Difference between IPv4 & IPv6 is the number of bits associated with each of them.
@@ -169,9 +169,35 @@ Ping: Internet control message protocol
     IPv6 notation method rules
         You can remove any leading 0's from a group
         any number of consecutive groups composed of just 0's can be replaced with two colons, but only once per address.
-   
+    multicast- a way of addressing groups of hosts all at once
+    link-local unicast addresses- allow for local network segment communications and are configured based upon a host's MAC address
     IPv6 loopback address (full) 0000:0000:0000:0000:0000:0000:0000:0001
     IPv6 loopback address (condensed) ::1
     IPv6 Address reservations:
-    FF00:: multicast reservation
-    2001:0db8: is reserved for documentation & education
+        FF00:: multicast reservation
+        2001:0db8: is reserved for documentation & education
+        FE80:: Link-local unicast
+    The first 64 bits of an IPv6 address is the network ID (first 16 numbers or letters)
+    Second 64 bits is Host ID
+
+    IPv6 Headers:
+    Breakdown of header:
+        1st field Verision field - 4 bit field that defines the version of IP in use
+        traffic class field - 8 bit field that defines the type of traffic contained in the IP datagram
+        flow label field - 20 bit field that's used in conjunction with the traffic class field for routers to make decisions about the quality of service Level
+            needed for that specific datagram
+        payload length field - 16 bit field that defines how long the data payload is
+        next header - unique to IPv6, tells what the kind of header is immediately after this one, if there is one present
+        hop limit field - 8 bit field that's identical in purpose to the TTL field.
+        Source & destination address - which are each 128 bits
+        if a next header was specified, it would follow, otherwise the data payload with the same length as specified in the payload length field follows.
+
+    IPv4 & IPv6 harmony
+    IPv4 mapped address space- space thats set aside to mark an IPv6 address as a correlating IPv4 address
+        ex. 
+        192.168.1.1 =  0:0:0:0:0:ffff:d1ad:35a7
+                        ^ the inital set of 5 zeros make the IPv4 translation possible, using the same 32 bits as the IPv4 would
+    IPv6 tunnels- are IPv6 tunnel servers that take incoming IPv6 traffic and encapsulate it within traditional IPv4 Datagrams
+    then it's delivered across the IPv4 network, to a device on IPv6 that recieves it and deencapsulates it further along IPv6 networks
+    IPv6 tunnel brokers - Companies that provide IPv6 tunneling endpoints for you, so you don't have to introduce additional equipment to your network
+    
