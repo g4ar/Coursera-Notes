@@ -149,5 +149,12 @@ Ping: Internet control message protocol
     Hybrid cloud- a term used to describe where companies might run things like their most sensitive proprietary tech on a private cloud, while entrusting
     their less sensitive servers to a public cloud
 
-    Everything as a server
+    Everything as a service
+    X as a service - where X stands for infrastructure as a service
+    Infrastructure as a service (IaaS)- you shouldn't have to worry about building your own network or your own servers
+    Platform as a service (PaaS)- a subset of cloud computing where a platform is provided for customers to run their service
+    Software as a service (SaaS)- essentially a waay of licensing the use of software to others while keeping that software centrally hosted
+
+    Cloud Storage:
+    Cloud storage system: a customer contracts a cloud storage provider to keep their data secure, accessible, and available.
 
