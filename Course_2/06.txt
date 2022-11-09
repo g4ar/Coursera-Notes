@@ -182,7 +182,7 @@ Ping: Internet control message protocol
 
     IPv6 Headers:
     Breakdown of header:
-        1st field Verision field - 4 bit field that defines the version of IP in use
+        1st field Version field - 4 bit field that defines the version of IP in use
         traffic class field - 8 bit field that defines the type of traffic contained in the IP datagram
         flow label field - 20 bit field that's used in conjunction with the traffic class field for routers to make decisions about the quality of service Level
             needed for that specific datagram
@@ -200,4 +200,3 @@ Ping: Internet control message protocol
     IPv6 tunnels- are IPv6 tunnel servers that take incoming IPv6 traffic and encapsulate it within traditional IPv4 Datagrams
     then it's delivered across the IPv4 network, to a device on IPv6 that recieves it and deencapsulates it further along IPv6 networks
     IPv6 tunnel brokers - Companies that provide IPv6 tunneling endpoints for you, so you don't have to introduce additional equipment to your network
-    
