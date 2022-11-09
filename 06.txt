@@ -133,5 +133,21 @@ Ping: Internet control message protocol
     DNS kinda killed host files
     Host files are a popular way for computer viruses to disrupt & redirect computer traffic
 
+    What is the cloud?
+    The cloud is a concept for cloud computing
+    cloud computing- a new model in computing where large clusters of machines let us use the total resources available in a more efficient way
+    cloud computing is a technological approach where computing resources are provisioned in a shareable way so that a lot of
+    users get what they need, when they need it
+    Hardware virtualization is a core concept on how cloud computing works. It allows a physical machine and a logical machine to
+    be abstracted away from each other. 
+    Virtualization- A single physical machine (or host) could run many individual virtual instances, called guests
+    Hardware virtualization platforms employ hypervisors
+    hypervisors are pieces of software that run and manage VM's while also offering guests a virtual operating platform thats
+    indistinguishable from the actual hardware
+    Public cloud - a large cluster of machines run by another company
+    Private cloud - used by a single large corporation and generally physically hosted on its own premises
+    Hybrid cloud- a term used to describe where companies might run things like their most sensitive proprietary tech on a private cloud, while entrusting
+    their less sensitive servers to a public cloud
 
+    Everything as a server
 
