@@ -1,0 +1,80 @@
+This file begins in Course 2, week 6 of the Coursera Google IT Support Professional
+
+Introduction to troubleshooting and the future of networking
+    Error detetection is the ability for a protocol or program to determine something went wrong
+    Error recovery is the ability for a protocol to attempt to fix an error
+        For Example, cyclical redundancy checks are used to ensure the correct data was received, if not the data is discarded,
+        then the transport layer decides weather the data needs to be resent.
+    Errors can still occur, hardware can breakdown, misconfigurations can occur and systems may be incompatible.
+
+    Module Goals:
+        1. Detect & fix network connectivity tools using tools on the 3 most common systems
+        2. Cover future important networking topics such as The cloud & IPv6
+
+Ping: Internet control message protocol
+    The most common issue in network connectivity is the inability to establish connection.
+    When a network error occurs, the device that detects it needs some way to communicate this to the source this is where ICMP comes in.
+    ICMP (Internet control message protocol) is used by routers or remote hosts to explain why a transmission has failed. They do this through packets.
+    ICMP Packets are made up of:
+        Type Field- 8 bits along which specifies what message is being delivered
+        code field- indicates a more specific reason for the message such as destination unreachable ect.
+        Checksum- 16 bit checksum that confirms the data is intact 
+        Rest of header- 32 bit field optionally used by some of the specific types and codes to send more data.
+        Payload for ICMP packet - exists so the recipient of the message knowns which of their transmissions caused the error
+            contains the entire IP header and the first 8 bytes of the data payload section of the offending packet.
+
+    ICMP was more developed for communication between computers than for human interaction, but we have tools to troubleshoot.
+    One of these tools is called ping. Every OS has one.
+    Ping lets you send a type of ICMP message called an Echo request.
+    an ICMP Echo request checks to see if a destination is up and running. If it is, the network will respond with a ICMP Echo
+    reply
+    You can invoke the echo via "ping" on the command line, followed by the domain name.
+    CONTROL C invokes a interrupt on Mac & Linux, which continues to repeat ping until interrupted
+
+    Traceroute
+    Traceroute is a utility that lets you discover the path between two nodes, and gives you information about each hop along the way
+
+    Traceroute uses the TTL field by slowly increasing the TTL to log each router hop.
+    When using traceroute you will see the time it takes for each of the three packets, the IP they arrived at, and a hostname if
+    able to be resolved
+    Other tools similar to traceroute (basically long running traceroutes)
+        MTR - Linux & MacOS (constantly updates)
+        pathping- Windows (runs for 50 seconds then displays all data)
+
+    Testing Port connectivity
+    Testing to see if things are working at the transport layer is best done through the following tools:
+        netcat- Linux & MacOS
+            Can be run through command nc requires an argument of both a host and a port
+            If you just want to check status you can plug in -z (Which stands for zero input/output mode)
+            A -v flag (verbose) is also useful as it makes the command readable to humans
+                combining both of these will tell us if we can connect to the host through that port
+        test-netconnection - Windows
+            if you only use netconnect with a host it will default to ICMP, but will display more data than ping
+            -port will test connectivity to a port 
+
+    Supplemental reading for netcat & test-netconnection
+        netcat
+            nc [options] <host> <port>
+        nc -u <host> <port>: flag would attempt a connection through UDP instead of TCP
+        nc -z <host> <port>: would scan for open ports 
+        nc -vv <host> <port>:is very verbose and gives more output text
+        nc -p <localport> <host> <port>: refers to a local port
+        nc -e <program> <host> <port>: executes a program after connection is established
+        nc -n <addr> <port>: Prevents DNS lookup, use this when avoiding overhead of DNS lookup or if DNS is not working
+
+        Test-Netconnection
+            Test-NetConnection <host> <port>
+        Test-NetConnection -InformationLevel "Detailed": test ping with detailed results
+        Test-NetConnection -ComputerName [remote host]: tests a connection to a remote host
+        Test-NetConnection -ComputerName [remote host] -Port [port number]: Tests TCP connectivity to a specific host & port, can be combined
+            with the detailed results 
+        Test-NetConnection -ComputerName [remote host] -DiagnoseRouting: performs route diagnostics to connect to a remote host, requires admin privileges
+        Test-NetConnection -ComputerName [remote host] -constrainInterface [interface number] -DiagnoseRouting -InformationLevel "Detailed": performs route diagnostics
+            to connect to remote host with routing constraints.
+
+    
+    
+
+
+
+
