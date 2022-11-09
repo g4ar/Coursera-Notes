@@ -72,9 +72,66 @@ Ping: Internet control message protocol
         Test-NetConnection -ComputerName [remote host] -constrainInterface [interface number] -DiagnoseRouting -InformationLevel "Detailed": performs route diagnostics
             to connect to remote host with routing constraints.
 
-    
-    
+    Name Resolution tools
+        most common command line tool to help with name resolution:
+        nslookup available on all three OS's 
+        basic use:
+            nslookup <hostname>
+                output: server that performed request & the resolution results
+            example:
+            nslookup twitter.com
+                Non-authoritative answer:
+                Name:   Twitter.com
+                Address:    104.244.42.193
+                Name:   Twitter.com
+                Address:    104.244.42.65
+        You can also use it as an interactive tool:
+            nslookup
+                >
+        From here you can enter multiple names in a row while also performing extra configuration
+        for example if you type "server <IP Address>" all the attempts will be made using that server instead of the default
+        name server
+        You can also enter "set type =<resource record type>", by default it will return A records, but you can ask for others
+        If you want to see exactly what's going on you can enter "debug" to display the full response packets, including intermediary
+        responses
 
+    Public DNS servers
+    an ISP almost always gives you access to a recursive name server as part of the service it provides
+    another option is to run your own DNS server to be able to name your devices
+    the last option is DNS as a service
+    Public DNS servers- name servers specifically setup so that anyone can use them for free 
+    Level 3 communications is one of the largest ISPs in the world, they're so big they sell network to OTHER ISP's
+    the IP addresses for level 3's public DNS severs are 4.2.2.1 - 4.2.2.6 these servers have never been acknowleged by LVL3
+    Google's public IP servers are: 8.8.8.8 & 8.8.4.4 these are officially documented & acknowleged by Google 
+    Most public DNS servers are available globally through anycast.
+    Hijacking outbound DNS requests with faulty responses is an easy way to redirect your users to malicious sites, so always
+    make sure the name server is run by a reputable company and try to use name servers provided by your ISP outside of 
+    troubleshooting scenarios.
+    Most public DNS servers also respond to ICMP echo requests, so they're a good choice for testing general internet connectivity with ping
+
+    DNS Registration & expiration
+    DNS is a global system managed with ICANN, meaning domains need to be globally unique.
+    Registrar - an orginization responsible for assigning individual domain names to other organizations
+    Network Solutions INC used to be responsible for almost all domains that weren't country specific
+    Creating a domain name:
+        Create an account with a Registrar
+        search their web UI for a domain name to determine if it's still available
+        pay for it
+        agree to the length of its Registration
+    once owned, you can either have the registrar act as the authoritative name server for the domain or configure your own servers
+    to be authoritative.
+    Domain names can also be transfered between parties
+
+    Host files
+    the original way that addresses were correlated with words was through host files
+    host files are evaluated by the networking stack of the operating system itself
+    All modern OS's still have host files, because of loopback address. 
+    A loopback address is a way of sending network information to yourself.
+    the loopback IP for IPv4 127.0.0.1 and is configured through a hostfile
+    almost every hostfile in existence will, at the very last, contain a line that reads 127.0.0.1 localhost, most likely followed by
+    ::1 where ::1 is the loopback address for IPv6
+    DNS kinda killed host files
+    Host files are a popular way for computer viruses to disrupt & redirect computer traffic
 
 
 
