@@ -158,3 +158,20 @@ Ping: Internet control message protocol
     Cloud Storage:
     Cloud storage system: a customer contracts a cloud storage provider to keep their data secure, accessible, and available.
 
+    IPv6 Addressing and Subnetting
+    IPv5 was an experimental protocol that introduced the concept of connections, but never saw adoption. It ended up being replaced by
+    TCP 
+    Difference between IPv4 & IPv6 is the number of bits associated with each of them.
+    IPv4 contains 32 bits
+    IPv6 contains 128 bits 
+    Undecillion amount of iP addresses.
+    IPv6 is written out in 8 groups of 16 bits each, further made into 4 hexadecimal numbers
+    IPv6 notation method rules
+        You can remove any leading 0's from a group
+        any number of consecutive groups composed of just 0's can be replaced with two colons, but only once per address.
+   
+    IPv6 loopback address (full) 0000:0000:0000:0000:0000:0000:0000:0001
+    IPv6 loopback address (condensed) ::1
+    IPv6 Address reservations:
+    FF00:: multicast reservation
+    2001:0db8: is reserved for documentation & education
