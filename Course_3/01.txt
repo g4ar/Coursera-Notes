@@ -1,0 +1,23 @@
+This file begins from week 1 of the third course of Google IT support professional certificate:
+
+    Course Introduction:
+    Course goals:
+        1. Learn how file systems work
+        2. Assign different user permissions and ressolvers
+        3. Understand how to use package managers, and the differences between different ones.
+        4. Become a OS power user
+
+    Lesson overview & practice tips:
+    Windows
+
+    Linux
+    The command line interpreter in Linux is called a shell and the language that we'll use to interact is called Bash
+
+    List directories in a GUI
+    Paths are the locations of files and directories
+    In windows each drive is assigned a letter such as C: D: or X:
+    the root of these directories is written with a slash, like C:\
+    Linux uses forward slashes
+
+    Linux commands:
+    grep - search for plain text that matches the request
